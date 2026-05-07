@@ -20,7 +20,7 @@ public class FechaG
              assert mes >= 10;
          }else {
             assert dia > 0 && dia <= 31;
-            assert mes > 0;
+            assert mes > 0; 
          
             
        
