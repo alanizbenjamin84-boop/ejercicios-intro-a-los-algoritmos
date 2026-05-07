@@ -15,17 +15,22 @@ public class FechaG
     
     public FechaG(int dia ,int mes , int anho) {
         assert anho >= 1582;
-         if (anho == 1582) {
+             if (anho == 1582) {
              assert dia >= 15;
              assert mes >= 10;
-         }else {
+             }else {
             assert dia > 0 && dia <= 31;
-            assert mes > 0; 
-         
-            
-       
-     
+            assert mes > 0 && mes <= 12;
         }
-}
-}
+    } 
+
+    public boolean esBisiesto () {
+        assert anho >= 1582;
+        if (anho % 4 == 0 && anho % 100 != 0 || anho % 400 == 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+} 
 
